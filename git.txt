@@ -1,0 +1,38 @@
+get to the directory where files need to be uploaded/downloaded, right click and select "Git Bash here"
+
+**download from git
+git clone link_to_the_repo
+
+**upload files to new repo
+git init
+git remote add origin paste_link_here
+git add .							#to add single file: git add abc.txt
+git commit -m "First commit"
+git pull origin master
+git push origin master
+
+**create git ignore
+git touch .gitignore
+
+using text editor add files which shouldn't be uploaded in the repo
+
+**branch & merge
+git branch child					#branch with name child 
+git checkout child				#switched to new branch
+echo "#comment">>abc.txt			#command to add file in child
+git add abc.txt
+git commit -m "comment"
+git push
+git push --set-upstream origin child
+git push
+git checkout master				#switch back to master
+git merge child					#command to merge child
+git push
+
+**save username & password
+$ git config --global user.name "GeeksforGeeks"
+$ git config --global user.email "GFGexample@gmail.orgg"
+$ git config --global user.password "1234321"
+
+$ git config --global credential.helper store			#saves user details
+
